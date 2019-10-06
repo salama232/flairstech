@@ -6,12 +6,12 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Country {
+    @Id
+    private String code;
     private String Name;
     private String Continent;
     private int Population;
     private String life_expectancy;
-    @Id
-    private String code;
     @ManyToOne
     private Country_Language countryLanguage;
     
@@ -19,7 +19,7 @@ public class Country {
     {
     	
     }
-	public Country(String name, String continent, int population, String life_expectancy, String code) {
+	public Country(String name, String continent, int population, String life_expectancy, String code,String country_code) {
 		super();
 		Name = name;
 		Continent = continent;
@@ -27,6 +27,7 @@ public class Country {
 		this.life_expectancy = life_expectancy;
 		this.code = code;
 		countryLanguage=new Country_Language();
+		countryLanguage.setCountry_code(country_code);
 	}
 
 	public Country_Language getCountry_Language() {

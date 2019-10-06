@@ -1,15 +1,16 @@
 package com.SpringBoot.Docker.flairstech.util;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class Country_Language {
 	@Id
-	private String country_code;
+	@Column(name="country_code")
+	private String code;
 	private String language;
 	private boolean is_official;
-	
 	
     
     public Country_Language()
@@ -18,7 +19,7 @@ public class Country_Language {
     }
 	public Country_Language(String country_code, String language, boolean is_official) {
 		super();
-		this.country_code = country_code;
+		this.code = country_code;
 		this.language = language;
 		this.is_official = is_official;
 	}
@@ -26,11 +27,11 @@ public class Country_Language {
 
 
 	public String getCountry_code() {
-		return country_code;
+		return code;
 	}
 
 	public void setCountry_code(String country_code) {
-		this.country_code = country_code;
+		this.code = country_code;
 	}
 
 	public String getLanguage() {

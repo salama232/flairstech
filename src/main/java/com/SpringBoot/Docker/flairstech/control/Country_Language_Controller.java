@@ -24,9 +24,9 @@ public class Country_Language_Controller {
 			 
 	 }
 	
-	 @RequestMapping("/lang/{id}")
-	 public List<Country_Language> getcountry(@PathVariable String id) {
-			return country_Language_Service.getcountry(id);
+	 @RequestMapping("/lang/{country_code}")
+	 public List<Country_Language> getcountry(@PathVariable String country_code) {
+			return country_Language_Service.getcountry(country_code);
 		}
 	 
 	
