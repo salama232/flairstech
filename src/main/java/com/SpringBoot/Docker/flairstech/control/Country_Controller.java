@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.SpringBoot.Docker.flairstech.service.Country_Service;
 import com.SpringBoot.Docker.flairstech.util.CodeNotFoundException;
 import com.SpringBoot.Docker.flairstech.util.Country;
-import com.SpringBoot.Docker.flairstech.util.Handler;
 @RestController
 public class Country_Controller {
-	 Handler han=new Handler();
+	 
 	@Autowired
 	public Country_Service country_Service;
 	@RequestMapping("/lang/country")
